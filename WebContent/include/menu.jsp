@@ -12,7 +12,7 @@
 	<c:choose>
 		<c:when test="${ empty sessionScope.user }">
 			<ul class="actions stacked">
-				<li><a href="<%=request.getContextPath()%>/joinForm.do"	class="button primary fit">Get Started</a></li>
+				<li><a href="<%=request.getContextPath()%>/joinnew.do"	class="button primary fit">Get Started</a></li>
 				<li><a href="<%=request.getContextPath()%>/login.do" class="button fit">Log In</a></li>
 			</ul>
 		</c:when>

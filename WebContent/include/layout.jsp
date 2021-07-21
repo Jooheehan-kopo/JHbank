@@ -19,9 +19,9 @@ img {
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="<%=request.getContextPath() %>/assets/css/main.css" />
 <noscript>
-	<link rel="stylesheet" href="../assets/css/noscript.css" />
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/assets/css/noscript.css" />
 </noscript>
 </head>
 	<body class="is-preload">
@@ -30,7 +30,7 @@ img {
 			<div id="wrapper">
 
 				<!-- Header -->
-					<jsp:include page ="/include/header.jsp"/>
+					<jsp:include page ="/include/top-title.jsp"/>
 
 				<!-- Menu -->
 					<jsp:include page="/include/menu.jsp"/>

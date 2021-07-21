@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 
   <style>
     body {
@@ -173,16 +175,16 @@
         }).open();
     }
 </script>
-          
-  
+        
 </head>
 
 <body>
+  
   <div class="container">
     <div class="input-form-backgroud row">
       <div class="input-form col-md-12 mx-auto">
         <h4 class="mb-3">JH BANK 회원가입</h4>
-        <form class="validation-form" novalidate>
+        <form method ="post" action="<%=request.getContextPath()%>/joinnew.do" class="validation-form" novalidate>
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="name">이름</label>
@@ -193,7 +195,7 @@
             </div>
             <div class="col-md-6 mb-3">
               <label for="nickname">주민번호</label>
-              <input type="text" class="form-control" name="user_res_no" id="res_no" placeholder="" value="" required>
+              <input type="text" class="form-control" name="user_res_no" id="res_no" placeholder="(-)를 제외하고 입력." value="" required>
               <div class="invalid-feedback">
                 주민번호를 입력해주세요.
               </div>
@@ -218,7 +220,7 @@
           </div>
           <div class="mb-3">
             <label for="password">비밀번호 확인</label>
-            <input type="password" class="form-control" name = "user_pw2" id="pw2" onchange="pwCheck()" placeholder="설정한 비밀번호를 한번 더 입력해주세요." required>&nbsp;<span id="check"></span>
+            <input type="password" class="form-control" name = "" id="pw2" onchange="pwCheck()" placeholder="설정한 비밀번호를 한번 더 입력해주세요." required>&nbsp;<span id="check"></span>
             <div class="invalid-feedback">
               비밀번호 일치여부를 확인해주세요.
             </div>
@@ -232,7 +234,7 @@
           </div>
           <div class="mb-3">
             <label for="phone">전화번호</label>
-            <input type="text" class="form-control" name = "user_phone " id="tel" placeholder="'-'제외하고 입력" required>
+            <input type="text" class="form-control" name = "user_phone" id="tel" placeholder="'-'제외하고 입력" required>
             <div class="invalid-feedback">
               전화번호를 입력해주세요.
             </div>
@@ -240,7 +242,7 @@
 
           <div class="mb-3">
             <label for="address">주소</label>
-            <input type="text" name ="postcode" id="sample4_postcode" placeholder="우편번호">
+            <input type="text" name ="post" id="sample4_postcode" placeholder="우편번호">
 			<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
 			<input type="text" name ="addr1" id="sample4_roadAddress" placeholder="도로명주소">
 			<input type="text" name= "addr2" id="sample4_jibunAddress" placeholder="지번주소">
@@ -265,6 +267,7 @@
           <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
         </form>
       </div>
+    </div>
     </div>
     <footer class="my-3 text-center text-small">
       <p class="mb-1">&copy; 2021 JH BANK</p>
