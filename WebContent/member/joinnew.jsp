@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
+<!-- modal -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <style>
     body {
@@ -175,6 +179,12 @@
         }).open();
     }
 </script>
+<script>
+	function complete(){
+		alert(${user_name}'님, 환영합니다! 회원가입이 완료되었습니다.')
+	}
+
+</script>
         
 </head>
 
@@ -205,7 +215,33 @@
           <div class="mb-3">
             <label for="id">아이디</label>
             <input type="text" class="form-control" name="user_id" id="id" placeholder="아이디를 설정해주세요." required>
-            <button type= submit> 중복확인 </button>
+            <!--중복확인 -->
+            <!-- Trigger the modal with a button -->
+			<button type="button" class="button primary" data-toggle="modal" data-target="#myModal">중복확인</button>
+            	<!-- Modal -->
+							<div id="myModal" class="modal fade" role="dialog">
+							  <div class="modal-dialog">
+							
+							    <!-- Modal content-->
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close button" data-dismiss="modal" style="height: 30px">&ensp;&times;&ensp;</button>
+							        <h4 class="modal-title"></h4>
+							      </div>
+							      <div class="modal-body">
+							        <p>사용가능한/ 불가능한 아이디입니다.</p>
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn button primary" data-dismiss="modal">닫기</button>
+							      </div>
+							    </div>
+							
+							  </div>
+							</div>
+            
+            
+            
+            
             <div class="invalid-feedback">
               아이디를 설정해주세요.
             </div>
@@ -264,7 +300,7 @@
             <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
           </div>
           <div class="mb-4"></div>
-          <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" onclick = "complete()">가입 완료</button>
         </form>
       </div>
     </div>

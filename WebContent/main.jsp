@@ -69,7 +69,7 @@ img {
 					</span>
 					<header class="major">
 						<h3>
-							<a href="landing.html" class="link">계좌만들기</a>
+							<a href="<%=request.getContextPath() %>/account/AccNew.jsp" class="link">계좌만들기</a>
 						</h3>
 						<p>Ipsum dolor sit amet</p>
 					</header>
@@ -89,7 +89,7 @@ img {
 					</span>
 					<header class="major">
 						<h3>
-							<a href="landing.html" class="link">전체계좌조회</a>
+							<a href="" class="link">전체계좌조회</a>
 						</h3>
 						<p>Lorem etiam nullam</p>
 					</header>
