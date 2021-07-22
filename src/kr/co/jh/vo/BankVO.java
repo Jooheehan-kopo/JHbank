@@ -14,6 +14,14 @@ public class BankVO {
 	public BankVO() {
 		
 	}
+	
+
+
+	public BankVO(String user_id) {
+		super();
+		this.user_id = user_id;
+	}
+
 
 
 	public BankVO(String acc_no, String acc_pw, String acc_name, String acc_date, String bank_code, String bank_name,
@@ -24,6 +32,18 @@ public class BankVO {
 		this.acc_name = acc_name;
 		this.acc_date = acc_date;
 		this.bank_code = bank_code;
+		this.bank_name = bank_name;
+		this.user_id = user_id;
+	}
+	
+	
+
+
+	public BankVO(String acc_no, String acc_name, String acc_date, String bank_name, String user_id) {
+		super();
+		this.acc_no = acc_no;
+		this.acc_name = acc_name;
+		this.acc_date = acc_date;
 		this.bank_name = bank_name;
 		this.user_id = user_id;
 	}

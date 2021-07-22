@@ -69,7 +69,7 @@ img {
 					</span>
 					<header class="major">
 						<h3>
-							<a href="<%=request.getContextPath() %>/account/AccNew.jsp" class="link">계좌만들기</a>
+							<a href="<%=request.getContextPath() %>/accnew.do" class="link">계좌만들기</a>
 						</h3>
 						<p>Ipsum dolor sit amet</p>
 					</header>
@@ -88,8 +88,8 @@ img {
 					<span class="image"> <img src="images/pic03.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3>
-							<a href="" class="link">전체계좌조회</a>
+						<h3><!-- 여기 문제임 -->
+							<a href="<%=request.getContextPath() %>/accsearch.do" class="link">전체계좌조회</a>
 						</h3>
 						<p>Lorem etiam nullam</p>
 					</header>

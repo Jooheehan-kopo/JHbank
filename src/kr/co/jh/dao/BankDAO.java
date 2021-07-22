@@ -20,8 +20,8 @@ public class BankDAO {
  * 전체계좌조회 서비스
  *@author joohee
  * */
-	public List<BankVO> searchAll (String userno) throws Exception {
-		List<BankVO> bankinfo = new ArrayList<BankVO>();
+	public List<BankVO> searchAll (String user_id) throws Exception {
+		List<BankVO> bank = new ArrayList<BankVO>();
 		Connection conn =null;
 		PreparedStatement pstmt =null;
 		try {
@@ -29,15 +29,21 @@ public class BankDAO {
 			StringBuilder sql = new StringBuilder();
 			
 			/*
-			 * select u.user_name,b.acc_no, b.acc_name,b.acc_date,b.bank_name
-				from user_info u, bank_info b
-				where u.user_id =b.user_id;
+			 * select c.bank_name,b.acc_no, b.acc_name,b.acc_date
+					from user_info u, bank_info b, bank_code c
+					where u.user_id =b.user_id
+					and c.bank_code= b.bank_code
+					and u.user_id='joohee';
 			 */
-			sql.append("SELECT *FROM BANK_INFO ");
-			sql.append("where BANK_JUMIN= ? ");
+			sql.append(" select c.bank_name,b.acc_no, b.acc_name,b.acc_date  ");
+			sql.append("  from user_info u, bank_info b, bank_code c  ");
+			sql.append("  where u.user_id =b.user_id ");
+			sql.append("  and c.bank_code= b.bank_code  ");
+			sql.append("  and u.user_id=? ");
+			
 			pstmt = conn.prepareStatement(sql.toString());
 			
-			pstmt.setString(1,userno);
+			pstmt.setString(1,user_id);
 		
 			
 			ResultSet rs = pstmt.executeQuery();
@@ -45,19 +51,15 @@ public class BankDAO {
 			while(rs.next()) {
 				
 			
-				userno= rs.getString("BANK_JUMIN");
-				String name= rs.getString("USER_NAME");
-				String accid=rs.getString("USER_ACC_ID");
-				int bcode=rs.getInt("BANK_CODE");
-				String bname=rs.getString("BANK_NAME");
-				String bstatus=rs.getString("EXCHANGE_STATUS");
-				int acctotal=rs.getInt("ACC_TOTAL");
-				String accpw=rs.getString("BANK_PW");
-				Date accdate=rs.getDate("ACC_DATE");
-				String accname = rs.getString("ACC_NAME");
+				user_id= rs.getString("user_id");
+				String bank_name= rs.getString("bank_name");
+				String acc_no=rs.getString("acc_no");
+				String acc_name=rs.getString("acc_name");
+				String acc_date=rs.getString("acc_date");
 				
-				BankVO bankall = new BankVO(userno,name,accid,bcode,bname,bstatus,acctotal,accpw,accdate,accname);
-				bankinfo.add(bankall);
+				
+				BankVO search = new BankVO(user_id,bank_name,acc_no,acc_name,acc_date);
+				bank.add(search);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +67,7 @@ public class BankDAO {
 			JDBCClose.close(conn, pstmt);
 		}
 		
-		return bankinfo;
+		return bank;
 	}
 
 	
