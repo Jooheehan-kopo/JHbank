@@ -6,7 +6,7 @@ public class BankVO {
 	private String acc_pw;
 	private String acc_name;
 	private String acc_date;
-	private int bank_code;
+	private String bank_code;
 	private String bank_name;
 	private String user_id;
 	
@@ -16,7 +16,7 @@ public class BankVO {
 	}
 
 
-	public BankVO(String acc_no, String acc_pw, String acc_name, String acc_date, int bank_code, String bank_name,
+	public BankVO(String acc_no, String acc_pw, String acc_name, String acc_date, String bank_code, String bank_name,
 			String user_id) {
 		super();
 		this.acc_no = acc_no;
@@ -69,12 +69,12 @@ public class BankVO {
 	}
 
 
-	public int getBank_code() {
+	public String getBank_code() {
 		return bank_code;
 	}
 
 
-	public void setBank_code(int bank_code) {
+	public void setBank_code(String bank_code) {
 		this.bank_code = bank_code;
 	}
 

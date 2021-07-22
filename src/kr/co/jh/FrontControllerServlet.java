@@ -42,7 +42,7 @@ public class FrontControllerServlet extends HttpServlet {
 		// 요청 uri만 알아내려면?
 		uri = uri.substring(context.length());
 		
-		
+		System.out.println("uri : " + uri);
 		try {
 			
 			/*
@@ -74,6 +74,7 @@ public class FrontControllerServlet extends HttpServlet {
 			}
 			*/
 			String callPage = control.handleRequest(request, response);
+			System.out.println("callPage : " + callPage);
 			
 			if(callPage.startsWith("redirect:")) {
 			

@@ -79,8 +79,8 @@ public class BankDAO {
 			conn= new ConnectionFactory().getConnection();
 			StringBuilder sql = new StringBuilder();
 			
-			sql.append("INSERT INTO BANK_INFO(acc_no,acc_pw,acc_name,bank_code,user_id, BANK_NAME ");					
-			sql.append("VALUES(111||round(dbms_random.value(100000000,999999999)),?,?,?,?,?) ");
+			sql.append("INSERT INTO BANK_INFO(acc_no,acc_pw,acc_name,bank_code,user_id) ");					
+			sql.append("  VALUES(111||round(dbms_random.value(100000000,999999999)),?,?,?,?) ");
 			
 	 // 계좌번호 앞자리 고정 어떻게함?/ bank코드 값으로 이름 연결하기. (완료)
 			//앞자리: '123'||시퀀스 / 코드: ui에서 스위치로 설정.
@@ -88,9 +88,9 @@ public class BankDAO {
 			
 			pstmt.setString(1,newacc.getAcc_pw());
 			pstmt.setString(2,newacc.getAcc_name());
-			pstmt.setInt(3,newacc.getBank_code());
+			pstmt.setString(3,newacc.getBank_code());
 			pstmt.setString(4,newacc.getUser_id());
-			pstmt.setString(5, newacc.getBank_name());
+		
 			
 			
 			pstmt.executeUpdate();

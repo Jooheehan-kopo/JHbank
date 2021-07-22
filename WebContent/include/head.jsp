@@ -6,7 +6,7 @@
 
 img{
 	position: relative;
-	top:14px;
+	top:10px;
 	
 }
 </style>
