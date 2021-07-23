@@ -74,7 +74,7 @@
 				<img class="card-img-top" src="<%=request.getContextPath() %>/images/card.png"
 					alt="Card image cap">
 				<div class="card-body">
-					<a href="" class="card-title"><c:out value="${user_id }"/></a>
+					<a href="" class="card-title"><c:out value="${bank.user_id }"/></a>
 					<p class="card-text comment">전체 계좌정보입니다</p>
 					<table>
 						
@@ -83,6 +83,7 @@
 							<td>은행명</td>
 							<td>계좌번호</td>
 							<td>계좌명</td>
+							<td>잔액</td>
 						</tr>
 						<c:forEach items="${list}" var="account">
 						<tr>
@@ -90,6 +91,7 @@
 							<td><c:out value="${account.acc_no }" /></td>
 							<td><c:out value="${account.acc_name }" /></td>
 							<td><c:out value="${account.acc_date }" /></td>
+							<td><c:out value="${account.acc_money }"></c:out></td>
 						</tr>
 						</c:forEach>
 					

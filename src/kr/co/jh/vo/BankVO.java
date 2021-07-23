@@ -9,6 +9,7 @@ public class BankVO {
 	private String bank_code;
 	private String bank_name;
 	private String user_id;
+	private String acc_money;
 	
 	
 	public BankVO() {
@@ -26,7 +27,7 @@ public class BankVO {
 	
 	
 	public BankVO(String acc_no, String acc_pw, String acc_name, String acc_date, String bank_code, String bank_name,
-			String user_id) {
+			String user_id,String acc_money) {
 		super();
 		this.acc_no = acc_no;
 		this.acc_pw = acc_pw;
@@ -35,17 +36,19 @@ public class BankVO {
 		this.bank_code = bank_code;
 		this.bank_name = bank_name;
 		this.user_id = user_id;
+		this.acc_money=acc_money;
 	}
 	
 	
 
 
-	public BankVO(String acc_no, String acc_name, String acc_date, String bank_name) {
+	public BankVO(String acc_no, String acc_name, String acc_date, String bank_name,String acc_money) {
 		super();
 		this.acc_no = acc_no;
 		this.acc_name = acc_name;
 		this.acc_date = acc_date;
 		this.bank_name = bank_name;
+		this.acc_money=acc_money;
 
 	}
 
@@ -118,13 +121,30 @@ public class BankVO {
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
+	
+	
+
+	public String getAcc_money() {
+		return acc_money;
+	}
+
+
+
+	public void setAcc_money(String acc_money) {
+		this.acc_money = acc_money;
+	}
+
 
 
 	@Override
 	public String toString() {
 		return "BankVO [acc_no=" + acc_no + ", acc_pw=" + acc_pw + ", acc_name=" + acc_name + ", acc_date=" + acc_date
-				+ ", bank_code=" + bank_code + ", bank_name=" + bank_name + ", user_id=" + user_id + "]";
+				+ ", bank_code=" + bank_code + ", bank_name=" + bank_name + ", user_id=" + user_id + ", acc_money="
+				+ acc_money + "]";
 	}
+
+
+
 	
 	
 	
