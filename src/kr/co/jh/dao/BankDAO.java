@@ -9,6 +9,7 @@ import java.util.List;
 import kr.co.jh.util.ConnectionFactory;
 import kr.co.jh.util.JDBCClose;
 import kr.co.jh.vo.BankVO;
+import kr.co.jh.vo.TransVO;
 
 public class BankDAO {
 	// 게시글 관리.
@@ -75,7 +76,7 @@ public class BankDAO {
 
 	
 
-	
+	/**계좌개설**/
 	public void resisterAcc (BankVO newacc) throws Exception {
 		
 		Connection conn =null;
@@ -111,6 +112,7 @@ public class BankDAO {
 	
 	}
 	
+	/**생성계좌 보여주기**/
 	//아직 구현 안함. - 계좌 개설하면 개설된 계좌 보여줌.(화면없음)
 	public String getAccId (String acc) throws Exception{
 		String accid = "";		
@@ -142,24 +144,15 @@ public class BankDAO {
 	}
 	
 	
+	//계좌이체
+	public List<BankVO> transList (TransVO tv) throws Exception{
+		List<BankVO> list = new ArrayList<BankVO>();
+		
+	
+		return null;
+		
+	}
 
-//	public LoginVO 회원가입(int no) throws Exception {
-//		for (LoginVO joinnew : list) {
-//			if (LoginVO.getId() == joinnew)
-//				return board;
-//		}
-//		return null; // 내가 원하는 게시글 번호가 없을시.
-//	}
-//
-//	
-//	public void 정보수정(BoardVO board) { // 번호와 제목을 가지고 있음
-//		for (BoardVO vo : list) {
-//			if (vo.getNo() == board.getNo()) {
-//				vo.setTitle(board.getTitle());
-//				return;
-//			}
-//		}
-//	}
 
 
 

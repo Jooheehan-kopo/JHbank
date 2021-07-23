@@ -181,7 +181,7 @@ button:hover {
 							<option value="333">하온</option>
 						</select> <input type="text" name="acc_no" placeholder="계좌번호를 입력하세요" />
 						<p>출금가능한 금액</p>
-						<h4><c:out value="${.acc_money }"></c:out></h4>
+						<h4><c:out value=""></c:out></h4>
 					</div>
 
 
