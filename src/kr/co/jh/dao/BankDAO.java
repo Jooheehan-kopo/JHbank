@@ -35,7 +35,7 @@ public class BankDAO {
 					and c.bank_code= b.bank_code
 					and u.user_id='joohee';
 			 */
-			sql.append(" select c.bank_name,b.acc_no, b.acc_name,b.acc_date  ");
+			sql.append(" select c.bank_name bank_name, b.acc_no acc_no , b.acc_name acc_name, to_char(b.acc_date,'yyyy/mm/dd') acc_date ");
 			sql.append("  from user_info u, bank_info b, bank_code c  ");
 			sql.append("  where u.user_id =b.user_id ");
 			sql.append("  and c.bank_code= b.bank_code  ");
@@ -51,14 +51,17 @@ public class BankDAO {
 			while(rs.next()) {
 				
 			
-				user_id= rs.getString("user_id");
 				String bank_name= rs.getString("bank_name");
 				String acc_no=rs.getString("acc_no");
 				String acc_name=rs.getString("acc_name");
 				String acc_date=rs.getString("acc_date");
 				
+				System.out.println("bank_name"+ bank_name);
+				System.out.println("acc_no"+ acc_no);
+				System.out.println("acc_name"+ acc_name);
+				System.out.println("acc_date"+ acc_date);
 				
-				BankVO search = new BankVO(user_id,bank_name,acc_no,acc_name,acc_date);
+				BankVO search = new BankVO(bank_name,acc_no,acc_name,acc_date);
 				bank.add(search);
 			}
 		} catch (Exception e) {

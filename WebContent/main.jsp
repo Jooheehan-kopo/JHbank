@@ -88,7 +88,7 @@ img {
 					<span class="image"> <img src="images/pic03.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><!-- 여기 문제임 -->
+						<h3>
 							<a href="<%=request.getContextPath() %>/accsearch.do" class="link">전체계좌조회</a>
 						</h3>
 						<p>Lorem etiam nullam</p>

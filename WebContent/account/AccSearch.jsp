@@ -28,7 +28,7 @@
 
         .wrap {
         	
-            width: 400px;
+            width: 500px;
             margin: 0px auto; 
           	display: block;
         }
@@ -59,8 +59,9 @@
 					<header class="major">
 						<h1>전체계좌조회</h1>
 					</header>
-					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-					<p>${user_id }고객님이현재보유한 계좌 정보입니다.</p>
+					<span class="image main"><img src="<%=request.getContextPath() %>/images/pic11.jpg" alt="" /></span>
+					<!-- <p><input type="text" name= "user_id" placeholder="아이디 입력">님이 현재보유한 계좌 정보입니다.</p>
+					<button type="submit">조회</button> // 아이디 값을 못받아와서 입력하게끔 하는중 -->
 				</div>
 			</section>
 
@@ -73,44 +74,30 @@
 				<img class="card-img-top" src="<%=request.getContextPath() %>/images/card.png"
 					alt="Card image cap">
 				<div class="card-body">
-					<a href="" class="card-title">"${acc_name }"</a>
-					<p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+					<a href="" class="card-title"><c:out value="${user_id }"/></a>
+					<p class="card-text comment">전체 계좌정보입니다</p>
 					<table>
 						
 						<tr>
+							<td>개설일자</td>
 							<td>은행명</td>
 							<td>계좌번호</td>
 							<td>계좌명</td>
-							<td>개설일자</td>
 						</tr>
+						<c:forEach items="${list}" var="account">
 						<tr>
-							<td><c:out value="${list.bank_name }" /></td>
+							<td><c:out value="${account.bank_name }" /></td>
+							<td><c:out value="${account.acc_no }" /></td>
+							<td><c:out value="${account.acc_name }" /></td>
+							<td><c:out value="${account.acc_date }" /></td>
 						</tr>
-						
+						</c:forEach>
 					
 					</table>
 
 				</div>
 			</div>
-        <div class="card">
-            <img class="card-img-top"
-                 src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
-                <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
-                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top"
-                 src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
-                <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
-                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-            </div>
+        
 
 
 
