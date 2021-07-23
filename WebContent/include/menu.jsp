@@ -5,8 +5,8 @@
 <nav id="menu">
 	<ul class="links">
 		<li><a href="<%=request.getContextPath() %>/main.jsp">Home</a></li>
-		<li><a href="landing.html">계좌조회</a></li>
-		<li><a href="generic.html">다른은행조회</a></li>
+		<li><a href="<%=request.getContextPath()%>/accsearch.do">계좌조회</a></li>
+		<li><a href="generic.html">계좌이체</a></li>
 		<li><a href="elements.html">마이페이지</a></li>
 	</ul>
 	<c:choose>
@@ -18,7 +18,7 @@
 		</c:when>
 		<c:otherwise>
 			<ul>
-				<li>${user.user_id }님</li>
+				<li><c:out value="${user.user_id }"/>님</li>
 				<li><a href="<%=request.getContextPath()%>/logout.do" class="button fit">Logout</a></li>
 			</ul>
 		</c:otherwise>

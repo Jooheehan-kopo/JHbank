@@ -1,144 +1,169 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="en">
-
-<head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	crossorigin="anonymous"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	crossorigin="anonymous"></script>
-
-<!-- 구글폰트 -->
-<link
-	href="https://fonts.googleapis.com/css?family=Stylish&display=swap"
-	rel="stylesheet">
-
-<title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
-
-<!-- style -->
-<style type="text/css">
-* {
-	font-family: 'Stylish', sans-serif;
-}
-
-.wrap {
-	width: 900px;
-	margin: auto;
-}
-
-.comment {
-	color: blue;
-	font-weight: bold;
-}
-</style>
-
-<script>
-	function hey() {
-		alert('안녕!!');
-	}
-</script>
-
-</head>
-
-<body>
-	<div class="wrap">
-		<div class="jumbotron">
-			<h1 class="display-4">나홀로 링크 메모장!</h1>
-			<p class="lead">중요한 링크를 저장해두고, 나중에 볼 수 있는 공간입니다</p>
-			<hr class="my-4">
-			<p class="lead">
-				<a onclick="hey()" class=btn btn-primary btn-lg" href="#"
-					role="button">포스팅박스 열기</a>
-			</p>
-		</div>
-		<div class="card-columns">
-			<div class="card">
-				<img class="card-img-top" src="/images/JHlogo.png"
-					alt="Card image cap">
-				<div class="card-body">
-					<a href="" class="card-title">${acc_name }</a>
-					<p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top"
-					src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
-					alt="Card image cap">
-				<div class="card-body">
-					<a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
-					<p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이
-						보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
-					<p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top"
-					src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
-					alt="Card image cap">
-				<div class="card-body">
-					<a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
-					<p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이
-						보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
-					<p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top"
-					src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
-					alt="Card image cap">
-				<div class="card-body">
-					<a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
-					<p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이
-						보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
-					<p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top"
-					src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
-					alt="Card image cap">
-				<div class="card-body">
-					<a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
-					<p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이
-						보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
-					<p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top"
-					src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
-					alt="Card image cap">
-				<div class="card-body">
-					<a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
-					<p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이
-						보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
-					<p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Complaint Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      margin: 15px 0;
+      font-weight: 400;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 70%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 6px);
+ }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .item:hover p, .item:hover i {
+      color: #095484;
+      }
+      input:hover, select:hover, textarea:hover {
+      box-shadow: 0 0 5px 0 #095484;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .city-item input {
+      width: calc(50% - 20px);
+      }
+      .city-item select {
+      width: calc(50% - 8px);
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <h1>Restaurant Complaint Form</h1>
+        <div class="item">
+          <p>Establishment Name</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Establishment Address</p>
+          <input type="text" name="name" placeholder="Street address"/>
+          <input type="text" name="name" placeholder="Street address line 2"/>
+          <div class="city-item">
+            <input type="text" name="name" placeholder="City" />
+            <input type="text" name="name" placeholder="Region" />
+            <input type="text" name="name" placeholder="Postal / Zip code" />
+            <select>
+              <option value="">Country</option>
+              <option value="1">Russia</option>
+              <option value="2">Germany</option>
+              <option value="3">France</option>
+              <option value="4" selected>Armenia</option>
+              <option value="5">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="item">
+          <p>Name</p>
+          <div class="name-item">
+            <input type="text" name="name" placeholder="First" />
+            <input type="text" name="name" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Daytime Phone</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Your Address</p>
+          <input type="text" name="name" placeholder="Street address"/>
+          <input type="text" name="name" placeholder="Street address line 2"/>
+          <div class="city-item">
+            <input type="text" name="name" placeholder="City" />
+            <input type="text" name="name" placeholder="Region" />
+            <input type="text" name="name" placeholder="Postal / Zip code" />
+            <select>
+              <option value="">Country</option>
+              <option value="1">Russia</option>
+              <option value="2">Germany</option>
+              <option value="3">France</option>
+              <option value="4" selected>Armenia</option>
+              <option value="5">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="item">
+          <p>Please Explain, including date and time in establishment</p>
+          <textarea rows="5"></textarea>
+        </div>
+        <div class="item">
+          <p>Email</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="/">SEND</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

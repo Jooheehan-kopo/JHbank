@@ -111,7 +111,7 @@ public class BankDAO {
 	
 	}
 	
-	
+	//아직 구현 안함. - 계좌 개설하면 개설된 계좌 보여줌.(화면없음)
 	public String getAccId (String acc) throws Exception{
 		String accid = "";		
 		BankVO bank = new BankVO();
@@ -120,11 +120,12 @@ public class BankDAO {
 		conn=new ConnectionFactory().getConnection();
 		
 		StringBuilder sql = new StringBuilder();
-		sql.append("SELECT USER_ACC_ID "
-				+ "FROM( SELECT USER_ACC_ID,ACC_DATE FROM BANK_INFO "
-				+ "where BANK_JUMIN=? "
-				+ "ORDER BY ACC_DATE DESC) "
-				+ "WHERE ROWNUM=1 " );
+		sql.append("  select bank_name, acc_no ");
+		sql.append(" from(select b.acc_no,b.acc_date,b.acc_name,c.bank_name  ");
+		sql.append("  from bank_info b,bank_code c  ");
+		sql.append(" where b.bank_code = c.bank_code ")	;	
+		sql.append("  and user_id=?  ");
+	
 		pstmt =conn.prepareStatement(sql.toString());
 		pstmt.setString(1, acc);
 		
@@ -133,7 +134,7 @@ public class BankDAO {
 		ResultSet rs = pstmt.executeQuery();
 		
 		if(rs.next()) {
-			accid = rs.getString("USER_ACC_ID");
+			accid = rs.getString("user_id");
 		}
 		return accid;
 		

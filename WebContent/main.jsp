@@ -38,11 +38,11 @@ img {
 			</nav>
 		</header>
  -->
- <jsp:include page="/include/header.jsp"/>
- 
- 
+		<jsp:include page="/include/header.jsp" />
+
+
 		<!-- Menu -->
-	<jsp:include page= "/include/menu.jsp"/>
+		<jsp:include page="/include/menu.jsp" />
 
 		<!-- Banner -->
 		<section id="banner" class="major">
@@ -69,9 +69,9 @@ img {
 					</span>
 					<header class="major">
 						<h3>
-							<a href="<%=request.getContextPath() %>/accnew.do" class="link">계좌만들기</a>
+							<a href="<%=request.getContextPath()%>/accnew.do" class="link">계좌만들기</a>
 						</h3>
-						<p>Ipsum dolor sit amet</p>
+						<p>조흔은행 계좌가 아직 없으시다면?! 계좌생성하러가기</p>
 					</header>
 				</article>
 				<article>
@@ -81,7 +81,7 @@ img {
 						<h3>
 							<a href="landing.html" class="link">계좌이체</a>
 						</h3>
-						<p>feugiat amet tempus</p>
+						<p>보다 간편하고 빠르게 계좌이체하세요!</p>
 					</header>
 				</article>
 				<article>
@@ -89,9 +89,9 @@ img {
 					</span>
 					<header class="major">
 						<h3>
-							<a href="<%=request.getContextPath() %>/accsearch.do" class="link">전체계좌조회</a>
+							<a href="<%=request.getContextPath()%>/accsearch.do" class="link">전체계좌조회</a>
 						</h3>
-						<p>Lorem etiam nullam</p>
+						<p>나의 전체 계좌조회를 통해 한눈에 목록 확인!</p>
 					</header>
 				</article>
 				<article>
@@ -101,7 +101,7 @@ img {
 						<h3>
 							<a href="landing.html" class="link">공인인증센터</a>
 						</h3>
-						<p>Nisl sed aliquam</p>
+						<p>공인인증서 발급/재발급/폐기</p>
 					</header>
 				</article>
 				<article>
@@ -109,9 +109,9 @@ img {
 					</span>
 					<header class="major">
 						<h3>
-							<a href="landing.html" class="link">Consequat</a>
+							<a href="landing.html" class="link">Q&A 및 공유게시판</a>
 						</h3>
-						<p>Ipsum dolor sit amet</p>
+						<p>질문/소통 자유게시판</p>
 					</header>
 				</article>
 				<article>
@@ -119,9 +119,9 @@ img {
 					</span>
 					<header class="major">
 						<h3>
-							<a href="landing.html" class="link">Etiam</a>
+							<a href="landing.html" class="link">마이페이지</a>
 						</h3>
-						<p>Feugiat amet tempus</p>
+						<p>나의 개인정보를 수정하고 싶다면?</p>
 					</header>
 				</article>
 			</section>

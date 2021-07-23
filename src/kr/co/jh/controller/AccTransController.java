@@ -1,11 +1,14 @@
-package kr.ac.jh.controllerB;
+package kr.co.jh.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class WriteFormController implements Controller {
+public class AccTransController implements Controller {
 
+	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "/board/writeForm.jsp";
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 }
